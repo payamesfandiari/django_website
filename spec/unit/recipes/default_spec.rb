@@ -7,14 +7,7 @@
 require 'spec_helper'
 
 describe 'django_website::default' do
-  context 'When all attributes are default, on an unspecified platform' do
-    let(:chef_run) do
-      runner = ChefSpec::ServerRunner.new
-      runner.converge(described_recipe)
-    end
-
-    it 'converges successfully' do
-      expect { chef_run }.to_not raise_error
-    end
+  describe command('django-admin --version') do
+    its(:stdout) { should match(/1.10.*/)}
   end
 end
