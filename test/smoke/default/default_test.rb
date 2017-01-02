@@ -16,12 +16,3 @@ describe port(80) do
   it { should_not be_listening }
   skip 'This is an example test, replace with your own test.'
 end
-
-describe command('python --version') do
-  its(:stdout) {should match (/3.*/i)}
-end
-
-
-describe command('django-admin --version') do
-  its(:stdout) {should match(/1.10/i)}
-end
