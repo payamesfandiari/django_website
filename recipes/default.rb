@@ -5,3 +5,4 @@
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
 include_recipe 'django_website::install_packages'
+include_recipe 'django_website::install_pip'
